@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<h3>Cálculo  IMC</h3><hr>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      function calculaImc(altura, peso) {
+          var imc = peso/(altura*altura);
+          return imc;
+      }
+      var altura = prompt("Informe a sua altura: ");
+      var peso = prompt("Informe o seu peso: ");
+      var imcCalculado = calculaImc(altura, peso);
+      if(imcCalculado < 18.5) {
+          escreve("Seu Imc é " + imcCalculado + " e está abaixo do esperado!");
+      }
+      if(imcCalculado >= 35) {
+          escreve("Seu Imc é " + imcCalculado + " e está acima do esperado!");
+      }
+      if(imcCalculado >= 18.5) {
+          if (imcCalculado < 35) {
+              escreve("Seu Imc é " + imcCalculado + " e está muito bom!");
+          }
+      }
+</script>

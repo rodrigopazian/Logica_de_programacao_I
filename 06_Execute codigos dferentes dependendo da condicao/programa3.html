@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<h3>Cálculo  Futebol utilizando if</h3><hr>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      function calculaPontos(vitorias, empates) {
+          var pontos = vitorias*3+empates*1;
+          return pontos;
+      }
+      function calculaSaldo(empates, vitorias) {
+          var saldoVitorias = (empates*0.33+vitorias*1)/jogos;
+          return saldoVitorias;
+      }
+      var jogos = parseInt(prompt("Informe o número de jogos: "));
+      var vitorias = parseInt(prompt("Informe o número de vitórias: "));
+      var empates = parseInt(prompt("Informe o número de empates: "));
+      var tPontos = calculaPontos(vitorias, empates);
+      var saldoVitorias = calculaSaldo(empates, vitorias);
+      if((saldoVitorias > 0.7) || (saldoVitorias == 0.7)) {
+        escreve("Seu time tem mais que 70% de aproveitamento com " + tPontos + " pontos em " + jogos + " jogos.");
+      }
+      if((saldoVitorias < 0.7) && (saldoVitorias > 0.3) || (saldoVitorias == 0.3)) {
+      escreve("Seu time tem entre 70% e 30% de aproveitamento com " + tPontos + " pontos em " + jogos + " jogos.");
+      }
+      if(saldoVitorias < 0.3) {
+        escreve("Seu time tem menos que 30% de aproveitamento com " + tPontos + " pontos em " + jogos + " jogos.");
+      }
+</script>

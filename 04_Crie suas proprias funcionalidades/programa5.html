@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<h3>Pular linhas por função, fazendo uso das tags hr e big</h3>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      var ano = 2019;
+      escreve("Eu nasci em : " + (ano - 25));
+      escreve("Adriano nasceu em : " + (ano - 26));
+      escreve("Paulo nasceu em : " + (ano - 32));
+</script>

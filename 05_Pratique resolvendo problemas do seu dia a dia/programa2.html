@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<h3>Cálculo IMC com inputs atraves do comando prompt</h3>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      function calculaImc(peso, altura) {
+          var imc = peso / (altura* altura);
+          return imc;
+      }
+
+      var alturaDigitada = prompt("Informe sua altura: ");
+      var pesoDigitado = prompt("Informe seu peso: ");
+      var imc = calculaImc(pesoDigitado, alturaDigitada);
+      escreve("Altura: " + alturaDigitada);
+      escreve("Peso: " + pesoDigitado);
+      escreve("Imc: " + imc);
+</script>

@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<h3>Funçao random</h3><hr>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      var numeroPensado = Math.round(Math.random() * 10);
+      //escreve no console do navegador para conferir valores randomicos sendo executados
+      console.log("numero pensado:" + numeroPensado);
+      var chute = parseInt(prompt("Digite seu chute!"));
+      if(chute == numeroPensado) {
+          escreve("Você acertou!");
+
+      } else {
+          escreve("Você errou!");
+      }
+</script>

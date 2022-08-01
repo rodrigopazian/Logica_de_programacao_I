@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<input/>
+<button>Comparar números</button>
+
+<script>
+
+    var numeros = [5,7,10,2,3];
+
+    var input = document.querySelector("input");
+        input.focus();
+
+    function verificar() {
+
+    var acertou = false;
+
+    for(var indice = 0; indice < numeros.length; indice++) {
+        if(input.value == numeros[indice]) {
+            alert("Você ACERTOU!");
+            acertou = true;
+            break;
+        }
+    }
+
+    if(acertou == false) {
+        alert("Você ERROU!");
+    }
+
+    input.value = ("");
+    input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

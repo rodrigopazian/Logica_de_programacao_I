@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<h1>Receitas</h1>
+<script>
+
+      function escreve(conteudo) {
+        document.write(conteudo);
+      }
+      var listaIngredientes = [];
+
+      var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+      var i = 1;
+
+      while( i <= quantidade) {
+              var ingrediente = prompt("Informe o ingrediente " + i);
+              var adcionaIngrediente = true;
+              for(var indice = 0; indice < listaIngredientes.length; indice++) {
+                    if(listaIngredientes[indice] == ingrediente) {
+                        adcionaIngrediente = false;
+                        alert("Ingrediente ja existe, insira novamente");
+                        break;
+                    }
+              }
+              if(adcionaIngrediente == true) {
+                      listaIngredientes.push(ingrediente);
+                      i++;
+              }
+      }
+      alert("Ingredientes adcionados");
+      escreve(listaIngredientes);
+      console.log(listaIngredientes);
+</script>

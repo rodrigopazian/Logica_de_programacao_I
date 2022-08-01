@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<input/>
+<button>Comparar entradas</button>
+<script>
+    var input = document.querySelector("input");
+    function random() {
+    var numeroAleatorio = Math.round(Math.random() * 10);
+    return numeroAleatorio;
+    }
+    function verificar() {
+      numeroAleatorio = random();
+      console.log(numeroAleatorio);
+      if(input.value == numeroAleatorio) {
+        alert("Voce acertou!!");
+      } else {
+        alert("Voce errou!!");
+      }
+    }
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+</script>

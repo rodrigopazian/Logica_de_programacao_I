@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<h3>Número Aleatorio</h3><hr>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      var numeroAleatorio = Math.round(Math.random() * 10);
+
+      var tentativas = 1;
+
+
+      while(tentativas <= 3) {
+      var tentativa = parseInt(prompt("Advinhe o número aleatório!"));
+
+          if(tentativa == numeroAleatorio) {
+
+              escreve("VOCÊ ACERTOU, o número aleatório era " + numeroAleatorio);
+              break;
+          } else {
+              escreve("VOCÊ ERROU!");
+          }
+          setTimeout(20);
+          tentativas++;
+      }
+</script>

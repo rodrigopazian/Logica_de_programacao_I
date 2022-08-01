@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<h3>Pular linhas por função</h3>
+<script>
+
+      //Funções
+      function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+        document.write(conteudoEntreParenteses);
+        pulaLinha();
+      }
+      function declaraValores() {
+        anoAtual = 2022;
+        anoAnterior = 0;
+        mediaIdadeFilhos = 28;
+      }
+      function calculaGeracoes(anoAtual, anoAnterior, mediaIdadeFilhos) {
+        mediaGeracoes = (anoAtual - anoAnterior)/mediaIdadeFilhos;
+        mediaGeracoes = Math.round(mediaGeracoes);
+      }
+
+      //Programa
+
+      declaraValores();
+      calculaGeracoes(anoAtual, anoAnterior, mediaIdadeFilhos);
+      escreve("O número de gerações em média, entre os anos " + anoAtual + " e " + anoAnterior + " com media de nascimento aos " + mediaIdadeFilhos + " anos é de: " + mediaGeracoes + " gerações.");
+      pulaLinha();
+      
+</script>

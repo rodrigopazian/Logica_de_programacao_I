@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<h3>Pular linhas por função, fazendo uso das tags hr e big</h3>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      function calculaImc(peso, altura) {
+          var imc = peso / (altura* altura);
+          return imc;
+      }
+
+      var imcAmigo = calculaImc(73, 1.71);
+      var imcAmigo2 = calculaImc(68, 1.72);
+      escreve("Imc: " + imcAmigo);
+      escreve("Imc2: " + imcAmigo2);
+      var mediaImc = (imcAmigo + imcAmigo2)/2;
+      escreve("Media IMCs: " + mediaImc);
+</script>

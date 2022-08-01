@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<input/>
+<button>Comparar números</button>
+
+<script>
+    function random() {
+          return Math.round(Math.random()*10);
+    }
+
+    function listarNumeros(numeroDeNumeros) {
+          var listaDeNumerosTemp = [];
+          var i = 0;
+          while(i < numeroDeNumeros) {
+              numeroRandom = random();
+              var adcionaNumero = true;
+              for(var indice = 0; indice < listaDeNumerosTemp.length; indice++) {
+                  if(listaDeNumerosTemp[indice] == numeroRandom) {
+                      adcionaNumero = false;
+                      break;
+                  }
+              }
+              if(adcionaNumero == true) {
+                  listaDeNumerosTemp.push(numeroRandom);
+                  i++;
+              }
+            }
+            return listaDeNumerosTemp;
+      }
+
+    var listaDeNumeros = listarNumeros(0);
+    console.log(listaDeNumeros);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verificar() {
+
+    var acertou = false;
+
+    for(var indice = 0; indice < listaDeNumeros.length; indice++) {
+        if(input.value == listaDeNumeros[indice]) {
+            alert("Você ACERTOU!");
+            acertou = true;
+            break;
+        }
+    }
+
+    if(acertou == false) {
+        alert("Você ERROU!");
+    }
+
+    input.value = ("");
+    input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

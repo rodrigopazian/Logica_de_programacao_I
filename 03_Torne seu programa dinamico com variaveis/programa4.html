@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<h3>Álcool ou Gasolina?</h3>
+<script>
+  //Calculo Consumo por KM
+  var capacidadeTCombustivel = 40;
+  var distanciaPercorrida = 480;
+  var consumoGasolina = distanciaPercorrida/capacidadeTCombustivel;
+  document.write("<h4>O consumo de gasolina foi de " + consumoGasolina + " km/litro</h4>");
+  //Calculo Consumo por KM
+  var precoGasolina = 6;
+  var consumoGasolinaKm = ((capacidadeTCombustivel/distanciaPercorrida)*precoGasolina);
+  document.write("<h4>O preço por Km com gasolina é de " + consumoGasolinaKm + " Brl/km</h4>");
+
+  distanciaPercorrida = 300;
+  var consumoAlcool = distanciaPercorrida/capacidadeTCombustivel;
+  document.write("<h4>O consumo de alcool foi de " + consumoAlcool + " km/litro</h4>");
+  var precoAlcool = 4;
+  var consumoAlcoolKm = ((capacidadeTCombustivel/distanciaPercorrida)*precoAlcool)
+  document.write("<h4>O preço por Km com alcool é de " + consumoAlcoolKm + " Brl/km</h4>");
+</script>

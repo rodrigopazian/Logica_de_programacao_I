@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<h3>Acesso</h3><hr>
+<script>
+      function pulaLinha() {
+          document.write("<br>");
+          document.write("<hr>");
+          document.write("<br>");
+      }
+      function escreve(conteudoEntreParenteses) {
+          document.write("<big>" + conteudoEntreParenteses + "</big>");
+          pulaLinha();
+      }
+      var senha = prompt("Entre com sua senha");
+
+      if(senha == "calopsitaazul") {
+
+          alert("Acesso liberado!");
+      } else {
+
+          alert("Acesso negado!");
+      }
+</script>
